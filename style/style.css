@@ -1,0 +1,178 @@
+@font-face {
+  font-family: "Merriweather";
+  src: local("Merriweather"),
+  url("../font/Merriweather-Regular.ttf") format("truetype");
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Merriweather", serif;
+}
+
+:root {
+  --main-color: #f0f0f0;
+}
+
+.body {
+  background-color: var(--main-color);
+  position: relative;
+}
+
+.header {
+  position: sticky;
+  top: 20px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.header-title {
+  margin-bottom: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.nav-bar-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.work-list-container {
+  max-width: 100%;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  gap: 20px;
+  margin: 20px;
+}
+
+.work-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.about-img {
+  width: 75%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.description-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.even {
+  order: 1;
+}
+
+.odd {
+  order: 0;
+}
+
+.about-me-title {
+  margin-bottom: 20px;
+}
+
+.about-me-text {
+  margin-bottom: 50px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-link {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.instagram::before {
+  position: absolute;
+  content: "";
+  background-image: url("../image/social/instagram.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.linkedin::before {
+  position: absolute;
+  content: "";
+  background-image: url("../image/social/linkedin.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.twitterx::before {
+  position: absolute;
+  content: "";
+  background-image: url("../image/social/twitterx.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.vk::before {
+  position: absolute;
+  content: "";
+  background-image: url("../image/social/vk.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+
+.hidden {
+  position: fixed;
+  transform: scale(0);
+}
